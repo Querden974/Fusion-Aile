@@ -8,7 +8,7 @@ import Reservation from './views/Reservation/Reservation.jsx'
 import Navbar from "@/components/navbar/Navbar.jsx";
 import React from "react";
 import { Toaster } from "@/components/ui/sonner.js";
-import {motion} from "framer-motion";
+
 
 createRoot(document.getElementById('root')).render(
     <React.StrictMode>

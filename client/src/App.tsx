@@ -7,16 +7,7 @@ import heroImg from './assets/hero-img.webp'
 
 
 export default function App() {
-  const [data, setData] = useState([])
-    const apiData = async () => {
-        const response = await axios.get(import.meta.env.VITE_API);
-        setData(response.data.test)
-        // console.log(response.data)
-  }
-        useEffect(() => {
-            apiData()
 
-        }, [])
 
 
         return (
