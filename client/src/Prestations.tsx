@@ -14,16 +14,11 @@ import {
     DrawerTitle,
     DrawerTrigger,
 } from "@/components/ui/drawer"
+import {PrestationTypes} from "@/types/PrestationTypes.ts";
 import {Button} from "@/components/ui/button"
 
-interface PrestationsProps {
+interface PrestationsProps extends PrestationTypes {
     presta:object[]
-    nom: string,
-    code: string,
-    couleur: string | string[],
-    prix: string,
-    description: string,
-    bienfaits: string[] | object[]
 }
 
 export default function Prestations():ReactElement {

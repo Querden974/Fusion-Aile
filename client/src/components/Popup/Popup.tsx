@@ -8,19 +8,11 @@ import {
     DialogTrigger
 } from "@/components/ui/dialog.js";
 import Article from "@/components/Article/Article.js";
+import {PrestationTypes} from "@/types/PrestationTypes.ts";
 
 interface SubArticle {
     titre: string,
     biens:string[]
-}
-
-interface PrestationTypes{
-    couleur: string | string[]
-    nom:string
-    description: string
-    code:string
-    prix: string
-    bienfaits: string[]
 }
 
 type PopupTypes = {
