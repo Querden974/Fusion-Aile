@@ -19,27 +19,34 @@ services:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-#
-#  n8n:
-#    image: n8nio/n8n
-#    ports:
-#      - "5678:5678"
-#    volumes:
-#      - n8n_data:/home/node.n8n
 
-#  mysql:
-#    image: mysql:8
-#    restart: always
-#    environment:
-#      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-#      MYSQL_DATABASE: ${MYSQL_DB}
-#      MYSQL_USER: ${MYSQL_USER}
-#      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-#    ports:
-#      - "3306:3306"
-#    volumes:
-#      - mysql_data:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_ARBITRARY: 1
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - network1
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
+    networks:
+      - network1
+
+
+
+networks:
+  network1:
+    driver: bridge
 
 volumes:
-  n8n_data:
   mysql_data: {}
