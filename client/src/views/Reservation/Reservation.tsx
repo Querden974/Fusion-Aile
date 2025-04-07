@@ -1,13 +1,13 @@
-import React, {useEffect, useState, useRef, RefObject, FormEvent, ChangeEvent} from 'react'
+import React, {useEffect, useState, useRef, RefObject, FormEvent, MouseEvent, ReactElement} from 'react'
 import {isBefore} from "date-fns";
 import 'cally'
 import {motion} from "framer-motion";
 import axios, {AxiosResponse} from "axios";
 import { Calendar } from "@/components/ui/calendar.js"
 import {fr} from "date-fns/locale/fr"
-import {handleHour, HandleInputs} from "@/views/Reservation/functions/Handle.js";
+import {handleHour} from "@/views/Reservation/functions/Handle.js";
 import {submitReservation} from "./functions/submitForm.js"
-import {useForm} from "react-hook-form";
+
 
 import { Input, Select } from "@/components/Form/FormInput.tsx"
 
@@ -26,13 +26,13 @@ interface PrestationsProps {
     bienfaits: string[] | object[]
 }
 
-export default function Reservation() {
+export default function Reservation(): ReactElement {
     const [prestations, setPrestations] = useState<object[]>([])
     const [day, setDay] = useState<Date>();
     const [hours, setHours] = useState<string>('');
-    const [email, setEmail] = useState<PropsTypes>({value:'null', error:false});
-    const [nom,setNom] = useState<PropsTypes>({value:'null', error:false});
-    const [prenom, setPrenom] = useState<PropsTypes>({value:'null', error:false});
+    const [email, setEmail] = useState<PropsTypes>({value:'', error:false});
+    const [nom,setNom] = useState<PropsTypes>({value:'', error:false});
+    const [prenom, setPrenom] = useState<PropsTypes>({value:'', error:false});
     const [presta, setPresta] = useState<string>();
     const form:RefObject<HTMLFormElement> = useRef<HTMLFormElement>(null);
     // const form = useForm()
@@ -80,12 +80,12 @@ export default function Reservation() {
                         selected={day}
                         onSelect={setDay}
                         className="rounded-md border shadow"
-                        disabled={(date) => isBefore(date, new Date())}
+                        disabled={(date:Date):boolean => isBefore(date, new Date())}
                     />
 
                     <div className="grid grid-cols-2 h-fit w-fit gap-2">
-                        {hoursList.map((item, index) => (
-                            <button key={index} onClick={(e)=>handleHour(e,hours, setHours)} type="button" value={item}
+                        {hoursList.map((item:string, index:number):ReactElement => (
+                            <button key={index} onClick={(e:MouseEvent<HTMLButtonElement>):void=>handleHour(e, setHours)} type="button" value={item}
                                     className={`btn  ${hours === item ? "btn-primary" : " hover:bg-primary/50"}`}> {item} </button>
                         ))}
 

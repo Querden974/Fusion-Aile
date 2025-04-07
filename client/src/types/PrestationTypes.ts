@@ -6,3 +6,4 @@ export interface PrestationTypes{
     prix: string
     bienfaits: string[]
 }
+
