@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect, ReactElement} from 'react'
 import Hero from './components/Hero/Hero.jsx'
 import axios from "axios";
 import { motion } from 'framer-motion'
@@ -6,18 +6,8 @@ import heroImg from './assets/hero-img.webp'
 
 
 
-export default function About() {
-  const [data, setData] = useState([])
-    const apiData = async () => {
-        const response = await axios.get(import.meta.env.VITE_API);
-        setData(response.data.test)
-        // console.log(response.data)
-  }
-        useEffect(() => {
-            apiData()
 
-        }, [])
-
+export default function About():ReactElement {
 
         return (
             <>

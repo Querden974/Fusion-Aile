@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect, ReactElement} from 'react'
 import Hero from './components/Hero/Hero.jsx'
 import axios from "axios";
 import { motion } from 'framer-motion'
@@ -6,7 +6,7 @@ import heroImg from './assets/hero-img.webp'
 
 
 
-export default function App() {
+export default function App():ReactElement {
 
 
 

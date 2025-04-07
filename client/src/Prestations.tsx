@@ -1,8 +1,7 @@
-import React from 'react'
+import React, {ReactElement} from 'react'
 import {useState, useEffect} from 'react'
-import axios from 'axios'
-import {NavLink} from "react-router";
-import maskImg from "./assets/prestation-mask.jpg";
+import axios, {AxiosResponse} from 'axios'
+import maskImg from './assets/prestation-mask.jpg';
 import Popup from "./components/Popup/Popup.jsx";
 import {motion} from "framer-motion";
 import {
@@ -17,27 +16,37 @@ import {
 } from "@/components/ui/drawer"
 import {Button} from "@/components/ui/button"
 
+interface PrestationsProps {
+    presta:object[]
+    nom: string,
+    code: string,
+    couleur: string | string[],
+    prix: string,
+    description: string,
+    bienfaits: string[] | object[]
+}
 
-
-export default function Prestations() {
-    const [prestations, setPrestations] = useState([])
-    const fetchPrestations = async () => {
-        const res = await axios.get('./articleData.json')
+export default function Prestations():ReactElement {
+    const [prestations, setPrestations] = useState<object[]>([])
+    const fetchPrestations:()=>Promise<void> = async ():Promise<void> => {
+        const res:AxiosResponse<PrestationsProps> = await axios.get('./articleData.json')
         setPrestations(res.data.presta)
     }
-    useEffect(() => {
+    useEffect(():void => {
         fetchPrestations()
     },[])
 
-    const content = () => {
-        const liste = []
-        prestations.map((prestation, index) => {
-            const dist = 300;
-            const x = -Math.cos(index/2)*dist;
-            const y = -Math.sin(index/2)*dist;
-            const btn = <Popup key={index} prestation={prestation} index={index} x={x} y={y}/>
+    const content:()=> ReactElement[] = ():ReactElement[] => {
+        const liste:ReactElement[] = []
+        prestations.map((prestation: PrestationsProps, index:number):void => {
+            const dist:number = 300;
+            const x:number = -Math.cos(index/2)*dist;
+            const y:number = -Math.sin(index/2)*dist;
+            const btn:ReactElement = <Popup key={index} prestation={prestation} index={index} x={x} y={y}/>
             liste.push(btn)
+
         })
+        console.log(liste)
         return liste
     }
     return (

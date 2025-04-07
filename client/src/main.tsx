@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
-import About from './About.jsx'
-import Prestations from './Prestations.jsx'
+import App from './App.js'
+import About from './About.js'
+import Prestations from './Prestations.tsx'
 import Reservation from './views/Reservation/Reservation.jsx'
 import Navbar from "@/components/navbar/Navbar.jsx";
 import React from "react";
+
 import { Toaster } from "@/components/ui/sonner.js";
 
 
