@@ -4,3 +4,7 @@ client/info.txt
 client/node_modules
 server/node_modules
 n8n
+node_modules
+/package-lock.json
+/package.json
+/tsconfig.json
