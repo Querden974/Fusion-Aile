@@ -1,0 +1,114 @@
+{
+  "presta":
+    [
+      {
+        "nom": "Massage\n Californien",
+        "code": "californien",
+        "couleur": "#3cb2ab",
+        "prix" : "1h - 65€ /1h30- 85€",
+        "description": "Le massage Californien vise à harmoniser le corps et l'esprit par une profonde relaxation physique et psychique.\n\nCe massage holistique surnommé \"le toucher du coeur\" ❤\uFE0F commence par des effleurages doux, enveloppants et relaxants; ainsi les manœuvres s'enchaînent et s'intensifient pour soulager les tensions profondes. Cela peut faire surgir et libérer des émotions cachées...",
+        "bienfaits": [
+          "Améliore l'oxygénation de l'épiderme tout en hydratant et augmentant l'élimination des cellules mortes",
+          "Favorise également la circulation veineuse et lymphatique",
+          "Évite les courbatures après une activité physique, et soulager les personnes souffrant de douleurs chroniques musculaires ( fibromalgie, maladies arthritiques et autres)",
+          "Lutte contre le stress et la fatigue",
+          "Aider les personnes ayant subi des traumatismes profonds (violences physiques, perte de poids important...) en leur permettant de se recentrer sur les sensations corporelles et de les intégrer pleinement"
+        ]
+      },
+      {
+        "nom": "Massage\n Ayurvédique",
+        "code": "ayurvedique",
+        "couleur": "#fcb500",
+        "prix" : "1h30-75€ / Forfait- 275€ ",
+        "description": "Le massage ayurvédique est un massage provenant de l'Inde, visant la purification, la relaxation et la tonification.",
+        "bienfaits": [
+          "Créer un réequilibrage énergétique en éliminant les toxines tant physiques et mentales",
+          "Améliorer la circulation des fluides corporelles, la digestion et le fonctionnement du système nerveux",
+          "Apporter la sérénité et plénitude sur le plan émotionnel; et occasionner également une prise de conscience de son schéma corporel"
+        ]
+      },
+      {
+        "nom": "Massage\n Fwotman",
+        "code": "fwotman",
+        "couleur": "#e46f59",
+        "prix" : "Forfait 3 séances - 180€",
+        "description": "Originaire des Caraïbes, le massage Fwotman combine des techniques de pression, d’étirement et de mobilisation pour libérer les tensions profondes et rééquilibrer le corps. Il agit en profondeur sur les muscles et les fascias pour améliorer la posture et apporter une sensation de légèreté immédiate. Ce massage énergique est idéal pour ceux qui recherchent un soin tonifiant et rééquilibrant.",
+
+        "bienfaits": [
+          "Soulagement des courbatures après des efforts physiques (sportifs\uD83C\uDFCB\uFE0F\u200D♀\uFE0F) ou refroidissement (grippe, \"chaud/froid\"), des rhumatismes ou encore des chutes avec \" l'enflure\" de certaines parties du corps (\"bless\")"
+        ]
+      },
+      {
+        "nom": "Réflexologie\n Plantaire THAI",
+        "code": "reflexologie_plantaire",
+        "couleur": "#ff933b",
+        "prix" : "1h - 50€",
+        "description": "Basée sur la stimulation des zones réflexes des pieds, la réflexologie plantaire favorise l’équilibre du corps et soulage divers maux comme le stress, la fatigue ou les tensions musculaires. Ce massage précis et ciblé agit sur les organes internes et le système nerveux pour procurer une détente profonde et un bien-être général.",
+        "bienfaits": [
+          "Amélioration de la circulation sanguine et lymphatique",
+          "Soulagement des douleurs et tensions musculaires",
+          "Stimulation des organes internes pour un meilleur équilibre général",
+          "Réduction du stress et des troubles du sommeil"
+        ]
+      },
+      {
+        "nom": "Massage\n Femme Enceinte",
+        "code": "femme_enceinte",
+        "couleur": "#e0c2c0",
+        "prix" : "1h - 70€ /1h30 - 90€",
+        "info" : "Du côté huile, j'utiliserai des huiles végétales et naturelles.",
+        "description": "Le massage prénatal est tout d'abord spécialement conçu pour accompagner la maman à partir du 4ème mois. Il offre un véritable moment de détente et de réconfort à la fois pour la maman mais aussi pour le bébé.",
+        "bienfaits":
+          [
+            {
+
+                "titre": "\uD83C\uDF38 Du côté de la future maman, le massage procure :",
+                "biens": [
+                  "Soulagement des douleurs et tensions musculaires ainsi que les crampes",
+                  "Amélioration de la circulation veineuse et réduction de l'accumulation du liquide dans les jambes, chevilles, pieds",
+                  "Amélioration de la qualité du sommeil et diminution des épisodes d'insomnie",
+                  "Amélioration de l'humeur et le Bien-être général pendant la grossesse ainsi que l'action à réduire la dépression, le stress, l'anxiété..."
+                ]
+
+            },
+            {
+
+                "titre": "\uD83D\uDC7C\uD83C\uDFFD Du côté de Bébé :",
+                "biens": [
+                  "Lors du massage prénatal, Bébé va ressentir les caresses ainsi que les bienfaits de l'hormone du bonheur (l'ocytocine) sécrètée par sa mère. Bébé va également se détendre et se sentir en sécurité",
+                  "Le massage développe donc ses capacités de perception ainsi que son épanouissement affectif"
+                ]
+
+            }
+          ]
+      },
+      {
+        "nom": "Nourrisson \n Enfant \n THAI",
+        "code": "nourisson",
+        "couleur": "#ffdd8f",
+        "prix" : "20-40 min - 30€ - 40€",
+        "description": "Basée sur la stimulation des zones réflexes des pieds, la réflexologie plantaire favorise l’équilibre du corps et soulage divers maux comme le stress, la fatigue ou les tensions musculaires. Ce massage précis et ciblé agit sur les organes internes et le système nerveux pour procurer une détente profonde et un bien-être général.",
+        "bienfaits": [
+          "Amélioration de la circulation sanguine et lymphatique",
+          "Soulagement des douleurs et tensions musculaires",
+          "Stimulation des organes internes pour un meilleur équilibre général",
+          "Réduction du stress et des troubles du sommeil"
+        ]
+      },
+      {
+        "nom": "Hypno\nMassage",
+        "code": "hypno_massage",
+        "couleur": ["#0cc0df","#ffde59"],
+        "prix" : "1h - 120€",
+        "description": "L’hypno-massage associe les bienfaits du massage à l’hypnose pour une relaxation encore plus profonde. Grâce à une approche douce et intuitive, il aide à relâcher les blocages émotionnels et à apaiser le mental. Ce massage unique favorise un lâcher-prise total et une connexion profonde avec soi-même.",
+        "bienfaits": [
+          "Réduction du stress et des tensions émotionnelles",
+          "Apaisement de l’esprit et meilleure gestion des émotions",
+          "Amélioration du sommeil et réduction des insomnies",
+          "Détente musculaire et mentale"
+        ]
+      }
+    ]
+
+
+}

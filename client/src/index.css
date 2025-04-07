@@ -1,0 +1,89 @@
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400|montserrat:300,300i,400,400i,500,500i);
+@import url('https://fonts.cdnfonts.com/css/selima');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+@plugin "daisyui";
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.debug {
+    transform-origin: 0 0; /* Change le pivot */
+}
+
+path {
+    fill: transparent;
+}
+
+text {
+    fill: #FF9800;
+}
+
+.debug::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: red; /* Point visible */
+    border-radius: 50%;
+    top: 0;
+    left: 0; /* Positionne le point au pivot */
+    transform: translate(-50%, -50%); /* Centre le point */
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme{
+    --font-selima: 'Selima', sans-serif;
+
+
+}
+
+@plugin "daisyui/theme" {
+    name: "fusionAile";
+    default: true; /* set as default */
+    prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+    color-scheme: light; /* color of browser-provided UI */
+
+    --color-base-100: oklch(0.979 0.02 20);
+    --color-base-200: oklch(0.95 0.03 20);
+    --color-base-300: oklch(0.92 0.04 20);
+    --color-base-content: oklch(0.20 0.05 20);
+    --color-primary: oklch(0.818 0.169 30);
+    --color-primary-content: oklch(0.98 0.01 30);
+    --color-secondary: oklch(0.75 0.12 80);
+    --color-secondary-content: oklch(0.98 0.01 80);
+    --color-accent: oklch(0.697 0.104 189.39);
+    --color-accent-content: oklch(0.98 0.01 160);
+    --color-neutral: rgb(251, 232, 224);
+    --color-neutral-content: rgb(219, 179, 169);
+    --color-info: oklch(0.7 0.2 220);
+    --color-info-content: oklch(0.98 0.01 220);
+    --color-success: oklch(0.65 0.25 140);
+    --color-success-content: oklch(0.98 0.01 140);
+    --color-warning: oklch(0.8 0.25 80);
+    --color-warning-content: oklch(0.2 0.05 80);
+    --color-error: oklch(0.65 0.3 30);
+    --color-error-content: oklch(0.98 0.01 30);
+
+
+
+    /* border radius */
+    --radius-selector: 1rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+
+    /* base sizes */
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+
+    /* border size */
+    --border: 1px;
+
+    /* effects */
+    --depth: 1;
+    --noise: 0;
+}
+
