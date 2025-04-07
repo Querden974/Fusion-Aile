@@ -5,7 +5,7 @@ import App from './App.js'
 import About from './About.js'
 import Prestations from './Prestations.tsx'
 import Reservation from './views/Reservation/Reservation.jsx'
-import Navbar from "@/components/navbar/Navbar.jsx";
+import Navbar from "@/components/navbar/Navbar.js";
 import React from "react";
 
 import { Toaster } from "@/components/ui/sonner.js";

@@ -1,12 +1,12 @@
 import {  NavLink } from 'react-router'
-import NavBtn from "@/components/navbar/NavBtn.jsx";
-import React from 'react'
+import NavBtn from "@/components/navbar/NavBtn.js";
+import React, {ReactElement} from 'react'
 
-export default function Navbar() {
+export default function Navbar(): ReactElement {
     return (
         <>
             <nav className="navbar bg-primary text-primary-content rounded-lg shadow-sm w-fit h-fit px-4 mx-auto mb-5 ">
-                <NavLink to="/" className="navbar-brand mr-16"><img src={"./Logo_Fusionailes.webp"} className={"w-32"}/></NavLink>
+                <NavLink to="/" className="navbar-brand mr-16"><img src={"./Logo_Fusionailes.webp"} className={"w-32"} alt={"logo"}/></NavLink>
                 <div className="flex gap-1">
                     <NavBtn name="Accueil" route="/"/>
                     <NavBtn name="Prestations" route="/presta"/>

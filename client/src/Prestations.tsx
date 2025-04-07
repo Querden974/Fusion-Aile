@@ -2,7 +2,7 @@ import React, {ReactElement} from 'react'
 import {useState, useEffect} from 'react'
 import axios, {AxiosResponse} from 'axios'
 import maskImg from './assets/prestation-mask.jpg';
-import Popup from "./components/Popup/Popup.jsx";
+import Popup from "./components/Popup/Popup.js";
 import {motion} from "framer-motion";
 import {
     Drawer,
@@ -46,7 +46,6 @@ export default function Prestations():ReactElement {
             liste.push(btn)
 
         })
-        console.log(liste)
         return liste
     }
     return (

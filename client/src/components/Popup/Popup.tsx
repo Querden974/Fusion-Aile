@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {ReactElement} from 'react'
 import {
     Dialog,
     DialogContent,
@@ -7,9 +7,30 @@ import {
     DialogTitle,
     DialogTrigger
 } from "@/components/ui/dialog.js";
-import Article from "@/components/Article/Article.jsx";
+import Article from "@/components/Article/Article.js";
 
-export default function Popup({prestation, index, x, y}) {
+interface SubArticle {
+    titre: string,
+    biens:string[]
+}
+
+interface PrestationTypes{
+    couleur: string | string[]
+    nom:string
+    description: string
+    code:string
+    prix: string
+    bienfaits: string[]
+}
+
+type PopupTypes = {
+    prestation: PrestationTypes
+    index: number
+    x:number
+    y:number
+}
+
+export default function Popup({prestation, index, x, y}:PopupTypes):ReactElement {
 
     return (
         <Dialog>

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {ReactElement} from 'react'
 
-export default function Hero() {
+export default function Hero():ReactElement {
     return (
         <div className="w-full flex flex-col mx-auto h-min justify-center items-center text-3xl text-[#ee826c] overflow-clip">
             <div className="w-[60rem] h-screen absolute m-auto translate-y-1/6 ">

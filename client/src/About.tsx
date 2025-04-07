@@ -1,5 +1,5 @@
 import {useState, useEffect, ReactElement} from 'react'
-import Hero from './components/Hero/Hero.jsx'
+import Hero from './components/Hero/Hero.js'
 import axios from "axios";
 import { motion } from 'framer-motion'
 import heroImg from './assets/hero-img.webp'
