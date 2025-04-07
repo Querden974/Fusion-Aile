@@ -35,11 +35,17 @@ export default function Reservation(): ReactElement {
     const [prenom, setPrenom] = useState<PropsTypes>({value:'', error:false});
     const [presta, setPresta] = useState<string>();
     const form:RefObject<HTMLFormElement> = useRef<HTMLFormElement>(null);
-    // const form = useForm()
 
-    const fetchPrestations:()=> Promise<void> = async () :Promise<void> => {
-        const res:AxiosResponse<PrestationsProps > = await axios.get('./articleData.json')
-        setPrestations(res.data.presta)
+
+    async function fetchPrestations ():Promise<void> {
+        try {
+            const res:AxiosResponse<PrestationsProps > = await axios.get('./articleData.json')
+            setPrestations(res.data.presta)
+        } catch (error) {
+            console.log(error);
+        }
+
+
     }
 
     const hoursList:string[] = ["09:00", "09:30","10:00","10:30","11:00","11:30","14:00","14:30","15:00","15:30","16:00","16:30","17:00","17:30"];
@@ -49,7 +55,7 @@ export default function Reservation(): ReactElement {
     }
 
     useEffect(():void => {
-        fetchPrestations()
+        fetchPrestations().catch((err:AxiosResponse):void => {console.log(err)});
     },[])
 
 
