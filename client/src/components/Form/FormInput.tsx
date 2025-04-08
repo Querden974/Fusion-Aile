@@ -1,6 +1,6 @@
 import {Input as ShadInput}  from "../ui/input"
 import React, {ChangeEvent, ReactElement, SetStateAction, Dispatch} from "react";
-import {HandleInputs} from "@/views/Reservation/functions/Handle.ts";
+import {HandleInputs} from "@/views/Dashboard/Reservation/functions/Handle.ts";
 import {InputPropsType, SelectPropsType} from "@/types/ReservationTypes.ts";
 
 export function Input({state, setState, type, name} : InputPropsType):ReactElement {
