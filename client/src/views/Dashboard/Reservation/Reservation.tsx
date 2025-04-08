@@ -5,7 +5,7 @@ import {motion} from "framer-motion";
 import axios, {AxiosResponse} from "axios";
 import { Calendar } from "@/components/ui/calendar.js"
 import {fr} from "date-fns/locale/fr"
-import {handleHour} from "@/views/Reservation/functions/Handle.js";
+import {handleHour} from "@/views/Dashboard/Reservation/functions/Handle.js";
 import {submitReservation} from "./functions/submitForm.js"
 
 

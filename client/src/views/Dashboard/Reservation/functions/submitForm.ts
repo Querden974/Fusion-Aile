@@ -18,7 +18,7 @@ interface FormProps extends FormEvent {
 
 const webhook:string = import.meta.env.VITE_RESERVATION;
 
-export function submitReservation(e:FormEvent<HTMLFormElement>,form:RefObject<HTMLFormElement>,day:Date,hours:string) {
+export async function submitReservation(e:FormEvent<HTMLFormElement>,form:RefObject<HTMLFormElement>,day:Date,hours:string) {
     e.preventDefault()
 
 
@@ -39,39 +39,41 @@ export function submitReservation(e:FormEvent<HTMLFormElement>,form:RefObject<HT
     formData['day'] = day.toLocaleDateString();
     formData['formated'] = new Date(day).setHours(hour[0],hour[1]).toString()
 
+    try {
+        await axios.post(webhook, formData, {
+            headers: { "Content-Type": "application/json" }})
 
-    axios.post(webhook, formData, {
-        headers: { "Content-Type": "application/json" }})
-        .then(response => {
-            const Toast = Swal.mixin({
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: "bottom-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                });
+                // console.log("Réponse reçue : ", response); // Vérifier la réponse du serveur
+                Toast.fire({
+                    icon: "success",
+                    title: "Réservation effectuée",
+                    text: `${day.toLocaleDateString()} - ${hours}`
+                });
+
+    } catch (error) {
+        console.log("TEST ERROR MESSAGE :", error.message);
+        const errorMessage = error.response?.data?.errorMessage || error.message;
+        const Toast = Swal.mixin({
             toast: true,
             position: "bottom-end",
             showConfirmButton: false,
             timer: 3000,
             timerProgressBar: true,
         });
-            // console.log("Réponse reçue : ", response); // Vérifier la réponse du serveur
-            Toast.fire({
-                icon: "success",
-                title: "Réservation effectuée",
-                text: `${day.toLocaleDateString()} - ${hours}`
-            });
+        Toast.fire({
+            icon: "error",
+            title: "Une erreur est survenue",
+            text: `${error.message}`
         })
-        .catch(error => {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: "bottom-end",
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-            });
-            Toast.fire({
-                icon: "error",
-                title: "Une erreur est survenue",
-                text: `${error.message}`
-            })
-        })
+    }
 
-    console.log(formData)
+    // console.log(formData)
 
 }

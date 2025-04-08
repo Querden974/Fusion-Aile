@@ -10,6 +10,8 @@
   ],
   "include": ["src", "declarations.d.ts", "env.d.ts"],
   "compilerOptions": {
+    "types": ["vitest", "node", "vite/client", "vitest/globals"],
+    "lib": ["dom", "ESNext"],
     "outDir": "dist",
     "module": "ESNext",
     "target": "ESNext",
@@ -17,6 +19,8 @@
     "allowJs": true,
     "checkJs": false,
     "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
