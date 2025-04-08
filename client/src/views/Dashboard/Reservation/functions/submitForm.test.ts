@@ -34,11 +34,13 @@ describe("Submit Reservation", () => {
     });
 
     it('should send form with axios.post and show toast when success', async () => {
+        // @ts-ignore
         const mockAxios = axios.post as vi.Mock;
         mockAxios.mockResolvedValue({ data: {} });
 
 
         const mockToast = { fire: vi.fn() };
+        // @ts-ignore
         (Swal.mixin as vi.Mock).mockReturnValue(mockToast);
 
         const fakeEvent = {
@@ -76,10 +78,13 @@ describe("Submit Reservation", () => {
     });
 
     it("should show error toast when axios.post failed", async () => {
+        // @ts-ignore
         (axios.post as vi.Mock).mockReset();
+        // @ts-ignore
         (axios.post as vi.Mock).mockRejectedValue(new Error("Network Error"));
 
         const mockToast = { fire: vi.fn() };
+        // @ts-ignore
         (Swal.mixin as vi.Mock).mockReturnValue(mockToast);
 
         const fakeEvent = {
