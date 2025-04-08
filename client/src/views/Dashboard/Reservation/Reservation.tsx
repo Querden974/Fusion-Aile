@@ -68,7 +68,7 @@ export default function Reservation(): ReactElement {
                     animate={{opacity : 1, transform: 'translateY(0%)'}}
                     exit={{opacity : 0, transform: 'translateY(20%)', transition : {duration: 0.1}}}>
 
-            <form ref={form} id="resa-form" method="POST" className="flex-col" onSubmit={(e:FormEvent<HTMLFormElement>):void=>submitReservation(e,form,day,hours)}>
+            <form ref={form} id="resa-form" method="POST" className="flex-col" onSubmit={(e:FormEvent<HTMLFormElement>):Promise<void>=>submitReservation(e,form,day,hours)}>
                 <fieldset className="flex  w-full gap-6">
                     <div className="">
                         <legend className="fieldset-legend mx-auto">Reservez votre prestation!</legend>
