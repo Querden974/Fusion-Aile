@@ -1,5 +1,5 @@
 # Fusion-Aile
-Fusion'Aile est un salon de massage dirigé par Xxxxxx XXXXXXX. Ce projet est conçu pour gérer à la fois la présentation des prestations du salon et les fonctionnalités internes de gestion. Il se compose de trois parties principales :
+Fusion'Aile est un salon de massage dirigé par Pascaline CUVELIER. Ce projet est conçu pour gérer à la fois la présentation des prestations du salon et les fonctionnalités internes de gestion. Il se compose de trois parties principales :
 
 - [Front] Page vitrine : Présente les services du salon à destination des clients.
 
