@@ -4,7 +4,7 @@ import {NavLink} from "react-router";
 export default function NavBtn({route, name} : {route: string, name:string}):ReactElement {
     return (
         <NavLink to={route} className={({ isActive }) =>
-            `py-1 px-2 font-bold rounded-box transition duration-200  ${isActive ? " text-primary-text   " : "hover:ring-2 hover:ring-primary-hover hover:text-secondary-content"}`
+            `h-[85%] rounded px-2 font-bold transition duration-200 items-center inline-flex  ${isActive ? " bg-primary   " : " opacity-75 hover:opacity-100 hover:bg-primary-hover"}`
         } >{name}</NavLink>
     )
 }

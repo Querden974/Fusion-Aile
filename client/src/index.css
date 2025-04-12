@@ -33,16 +33,12 @@ text {
     transform: translate(-50%, -50%); /* Centre le point */
 }
 
-.glass{
-    @apply h-full w-full bg-primary rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm opacity-20 border border-gray-100
-}
-
 @custom-variant dark (&:is(.dark *));
 
 @theme{
     --font-selima: 'Selima', sans-serif;
     --color-secondary-darker: oklch(0.603 0.094 81.131);
-    --color-primary-darker: oklch(0.513 0.084 31.993);
+    --color-primary-darker: oklch(0.727 0.11 31.788);
     --color-primary-hover: oklch(0.678 0.114 32.459);
     --color-primary-text: oklch(0.765 0.119 20.176);
 
