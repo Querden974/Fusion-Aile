@@ -32,7 +32,7 @@
         "code": "fwotman",
         "couleur": "#e46f59",
         "prix" : "Forfait 3 séances - 180€",
-        "description": "Originaire des Caraïbes, le massage Fwotman combine des techniques de pression, d’étirement et de mobilisation pour libérer les tensions profondes et rééquilibrer le corps. Il agit en profondeur sur les muscles et les fascias pour améliorer la posture et apporter une sensation de légèreté immédiate. Ce massage énergique est idéal pour ceux qui recherchent un soin tonifiant et rééquilibrant.",
+        "description": "Originaire des Caraïbes, le massage Fwotman combine des techniques de pression, d’étirement et de mobilisation pour libérer les tensions profondes et rééquilibrer le corps. Il agit en profondeur sur les muscles et les fascias pour améliorer la posture et apporter une sensation de légèreté immédiate.\nCe massage énergique est idéal pour ceux qui recherchent un soin tonifiant et rééquilibrant.",
 
         "bienfaits": [
           "Soulagement des courbatures après des efforts physiques (sportifs\uD83C\uDFCB\uFE0F\u200D♀\uFE0F) ou refroidissement (grippe, \"chaud/froid\"), des rhumatismes ou encore des chutes avec \" l'enflure\" de certaines parties du corps (\"bless\")"
@@ -62,7 +62,7 @@
           [
             {
 
-                "titre": "\uD83C\uDF38 Du côté de la future maman, le massage procure :",
+                "titre": "\uD83C\uDF38 Du côté de maman :",
                 "biens": [
                   "Soulagement des douleurs et tensions musculaires ainsi que les crampes",
                   "Amélioration de la circulation veineuse et réduction de l'accumulation du liquide dans les jambes, chevilles, pieds",

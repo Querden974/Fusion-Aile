@@ -33,6 +33,10 @@ text {
     transform: translate(-50%, -50%); /* Centre le point */
 }
 
+.container{
+    container-type: inline-size;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme{
