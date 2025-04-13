@@ -9,6 +9,7 @@ import {
     DrawerTitle,
     DrawerTrigger
 } from "@/components/ui/drawer.tsx";
+import {PhoneOutgoing, Mail} from "lucide-react";
 import {Button} from "@/components/ui/button.tsx";
 
 export function Drawer({btntxt, styleBtn}:{btntxt:string, styleBtn:string}):ReactElement {
@@ -17,19 +18,17 @@ export function Drawer({btntxt, styleBtn}:{btntxt:string, styleBtn:string}):Reac
             <DrawerTrigger asChild>
                 <Button className={styleBtn}>{btntxt}</Button>
             </DrawerTrigger>
-            <DrawerContent className={'mx-auto items-center bg-neutral w-1/3'}>
+            <DrawerContent className={'mx-auto items-center bg-neutral md:w-1/3 -translate-y-12 md:translate-y-0'}>
                 <DrawerHeader>
                     <DrawerTitle className={"text-2xl"}>Contactez moi pour prendre un rendez-vous!</DrawerTitle>
                     <DrawerDescription>
                         <div className="flex flex-col gap-4">
-                            <div className="flex justify-evenly mx-auto w-full mt-3">
+                            <div className="flex flex-col items-center gap-1 md:justify-evenly mx-auto w-full mt-3">
+                                <a href={"tel:+33602064339"} className={"inline-flex items-center text-xl gap-1 select-text"}>
+                                    <PhoneOutgoing/> 06 02 06 43 39
+                                </a>
                                 <p className={"inline-flex items-center text-xl gap-1 select-text"}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2m10 3a2 2 0 0 1 2 2m-2-6a6 6 0 0 1 6 6" />
-                                    </svg> 06 02 06 43 39
-                                </p>
-                                <p className={"inline-flex items-center text-xl gap-1 select-text"}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></g></svg> pascaline@outlook.fr
+                                    <Mail/> pascaline@outlook.fr
                                 </p>
                             </div>
                             <div className="flex gap-2 items-center justify-center ">

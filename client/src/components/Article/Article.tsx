@@ -22,7 +22,7 @@ export default function Article({ article }:{article:ArticleTypes}):ReactElement
             <div className={` gap-8 items-start ${isObject ? 'grid grid-cols-2' : 'flex flex-col'}`}>
                 {isString &&
                     <ul>
-                        {article.bienfaits.map((item:string, index:number):ReactElement => (<li key={index} className="list-disc ml-5">{item}</li>))}
+                        {article.bienfaits.map((item:string, index:number):ReactElement => (<li key={index} className="list-disc ml-6">{item}</li>))}
                     </ul>
                 }
                 {isObject && article.bienfaits.map((item:SubArticle, index:number):ReactElement => {
@@ -31,10 +31,10 @@ export default function Article({ article }:{article:ArticleTypes}):ReactElement
                                     return (
                                         <div key={index} className="flex flex-col gap-1 items-start">
 
-                                            <h3 className="font-semibold">{item.titre}</h3>
-                                            <ul className={"flex flex-col gap-1 items-start list-inside"}>
+                                            <h3 className="font-semibold text-left">{item.titre}</h3>
+                                            <ul className={"flex flex-col gap-1 items-start list-outside ml-6"}>
                                                 {item.biens.map((bien:string, i:number):ReactElement => (
-                                                    <li key={i} className="list-disc">{bien}</li>
+                                                    <li key={i} className="list-disc text-left">{bien}</li>
                                                 ))}
                                             </ul>
                                         </div>

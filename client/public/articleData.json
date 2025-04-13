@@ -62,7 +62,7 @@
           [
             {
 
-                "titre": "\uD83C\uDF38 Du côté de maman :",
+                "titre": "\uD83C\uDF38Pour maman:",
                 "biens": [
                   "Soulagement des douleurs et tensions musculaires ainsi que les crampes",
                   "Amélioration de la circulation veineuse et réduction de l'accumulation du liquide dans les jambes, chevilles, pieds",
@@ -73,7 +73,7 @@
             },
             {
 
-                "titre": "\uD83D\uDC7C\uD83C\uDFFD Du côté de Bébé :",
+                "titre": "\uD83D\uDC7C\uD83C\uDFFDPour Bébé:",
                 "biens": [
                   "Lors du massage prénatal, Bébé va ressentir les caresses ainsi que les bienfaits de l'hormone du bonheur (l'ocytocine) sécrètée par sa mère. Bébé va également se détendre et se sentir en sécurité",
                   "Le massage développe donc ses capacités de perception ainsi que son épanouissement affectif"
@@ -85,7 +85,7 @@
       {
         "nom": "Nourrisson \n Enfant \n THAI",
         "code": "nourisson",
-        "couleur": "#ffdd8f",
+        "couleur": "#e6c373",
         "prix" : "20-40 min - 30€ - 40€",
         "description": "Basée sur la stimulation des zones réflexes des pieds, la réflexologie plantaire favorise l’équilibre du corps et soulage divers maux comme le stress, la fatigue ou les tensions musculaires. Ce massage précis et ciblé agit sur les organes internes et le système nerveux pour procurer une détente profonde et un bien-être général.",
         "bienfaits": [

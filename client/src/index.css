@@ -1,4 +1,4 @@
-@import url(https://fonts.bunny.net/css?family=abril-fatface:400|montserrat:300,300i,400,400i,500,500i);
+@import url(https://fonts.bunny.net/css?family=abril-fatface:400|amaranth:400|montserrat:300,300i,400,400i,500,500i);
 @import url('https://fonts.cdnfonts.com/css/selima');
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -7,6 +7,7 @@
 @plugin "daisyui";
 body{
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 .debug {
@@ -41,6 +42,7 @@ text {
 
 @theme{
     --font-selima: 'Selima', sans-serif;
+    --font-amaranth: 'Amaranth', sans-serif;
     --color-secondary-darker: oklch(0.603 0.094 81.131);
     --color-primary-darker: oklch(0.727 0.11 31.788);
     --color-primary-hover: oklch(0.678 0.114 32.459);

@@ -11,13 +11,13 @@ export default function About():ReactElement {
 
         return (
             <>
-                <motion.div className="flex flex-col w-full h-fit items-center mt-16 gap-4"
+                <motion.div className="flex flex-col w-full h-fit items-center mt-4 md:mt-16 gap-4"
                             initial={{opacity : 0, transform: 'translateY(20%)'}}
                             animate={{opacity : 1, transform: 'translateY(0%)'}}
                             exit={{opacity : 0, transform: 'translateY(20%)', transition : {duration: 0.1}}}
                 >
                     <h3 className={"col-span-3 text-center font-semibold"}>Fusionnel : se dit de deux (ou plusieurs) personnes qui ne peuvent se passer l'une de l'autre ...</h3>
-                    <div className="grid grid-cols-3 w-full h-fit items-center gap-2">
+                    <div className="grid  md:grid-cols-3 w-full h-fit items-center gap-2">
                         <p className={"whitespace-pre-line text-xl w-fit"}>Me voilà lancée dans cette nouvelle aventure de l'auto-entreprenariat... Et bien heureusement, je ne suis pas seule...
                             Mon entourage, ma famille, et surtout mon conjoint !
                             <br/><br/>
@@ -29,8 +29,8 @@ export default function About():ReactElement {
                             Déjà 25 années de vie commune, marquées par le désir toujours plus fort de continuer à vivre ensemble ! Et aujourd'hui, nous souhaitons collaborer afin de partager l'enseignement de nos expériences vécues...
                             </p>
 
-                        <img src={heroImg} className={"w-fit"} draggable={false}/>
-                        <p className={"whitespace-pre-line text-xl w-fit"}>
+                        <img src={heroImg} className={"row-start-1 md:col-start-2 h-fit w-fit"} draggable={false}/>
+                        <p className={" whitespace-pre-line text-xl w-fit"}>
                             FUSION'AILE correspond exactement à ce que nous souhaitons :
                             - le corps est indissociable de l'esprit
                             - ils doivent être en harmonie, en Fusion, en équilibre, en symbiose afin d'accueillir et de vivre le Bien-être.

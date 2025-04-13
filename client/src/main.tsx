@@ -14,7 +14,10 @@ import { Toaster } from "@/components/ui/sonner.js";
 createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <BrowserRouter>
-            <Navbar />
+
+                <Navbar/>
+
+
             <Routes>
                 <Route index element={<App />} />
                 <Route path="/presta" element={<Prestations />} />
