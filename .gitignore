@@ -1,4 +1,6 @@
 .env
+/client/.env.production
+*.env.*
 client/info.txt
 .idea
 client/node_modules
