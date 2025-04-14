@@ -11,3 +11,5 @@ node_modules
 /package.json
 /tsconfig.json
 client/dist
+client/.env.production
+client/.env.production
