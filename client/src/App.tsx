@@ -2,9 +2,9 @@ import {useState, useEffect, ReactElement} from 'react'
 import Hero from './components/Hero/Hero.js'
 import axios from "axios";
 import { motion } from 'framer-motion'
-import heroImg from './assets/hero-img.webp'
+import heroImg from '@/assets/pascaline.webp'
 import maskImg from "@/assets/prestation-mask.jpg";
-
+import {NavLink} from 'react-router'
 
 
 export default function App():ReactElement {
@@ -25,7 +25,7 @@ export default function App():ReactElement {
                                  style={{ maskImage: `url(${maskImg})`, maskPosition:"center",maskMode:"luminance",maskSize: "100% 100%", WebkitMaskImage: `url(${maskImg})` }}>
 
                                 <img
-                                    src="/pascaline.webp"
+                                    src={heroImg}
                                     alt="pascaline"
                                     className="w-full -translate-y-13 md:-translate-y-26"/>
                             </div>
@@ -35,7 +35,7 @@ export default function App():ReactElement {
                                 <p className="py-6">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem beatae nemo non perferendis similique voluptatem? Accusantium autem blanditiis corporis dignissimos doloremque dolorum ea, eligendi error eveniet hic illo ipsa laboriosam molestiae molestias odio officiis quidem quod repellat repellendus similique tempore tenetur vitae voluptate. Ab culpa, dicta dignissimos distinctio molestias provident quisquam saepe temporibus? Consectetur molestiae nisi obcaecati odio praesentium sit tenetur velit voluptas.
                                 </p>
-                                <a href={"/presta"} className="btn btn-primary h-10 w-full md:w-fit mb-16 md:mb-0">Voir les prestations</a>
+                                <NavLink to={"/presta"} className="btn btn-primary h-10 w-full md:w-fit mb-16 md:mb-0">Voir les prestations</NavLink>
                             </div>
                         </div>
                     </div>

@@ -10,19 +10,20 @@ import React from "react";
 
 import { Toaster } from "@/components/ui/sonner.js";
 
+const baseURL:string = "/projets/fusionaile"
 
 createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename={"/projets/fusionaile"}>
 
                 <Navbar/>
 
 
             <Routes>
-                <Route index element={<App />} />
-                <Route path="/presta" element={<Prestations />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/reserver" element={<Reservation />} />
+                <Route path={`/`} element={<App />} />
+                <Route path={`/presta`} element={<Prestations />} />
+                <Route path={`/about`} element={<About />} />
+                <Route path={`/reserver`} element={<Reservation />} />
             </Routes>
 
 

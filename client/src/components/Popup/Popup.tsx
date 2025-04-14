@@ -73,7 +73,7 @@ export function Popup({prestation, index, x, y}:PopupTypes):ReactElement {
                                 {(!isObject && prestation.bienfaits.length <=4 && prestation.bienfaits.length >1 ) && <Article article={prestation} />}
                             </div>
 
-                            <img src={`/massages/${prestation.code}.webp`} className={" rounded-box"} alt=""/>
+                            <img src={`/projets/fusionaile/massages/${prestation.code}.webp`} className={" rounded-box"} alt=""/>
                         </div>
                         {(isObject || prestation.bienfaits.length > 4 || prestation.bienfaits.length === 1) && <Article article={prestation} />}
                         <p className={"text-center min-w-1/3 mx-auto  p-4 rounded-box font-semibold"}
@@ -96,7 +96,7 @@ export function PopupRelative({prestation, index, last}:PopupTypes):ReactElement
     const isObject:boolean = typeof prestation.bienfaits[0] === "object";
 
     return (
-        <Drawer>
+        <Drawer autoFocus={true}>
             <DrawerTrigger asChild>
                 <button key={index}
 
@@ -108,9 +108,9 @@ export function PopupRelative({prestation, index, last}:PopupTypes):ReactElement
                             : {backgroundColor: prestation.couleur}
 
                         }>
-                    <span className={"text-white"}>
+
                         {prestation.nom}
-                    </span>
+
 
                 </button>
 

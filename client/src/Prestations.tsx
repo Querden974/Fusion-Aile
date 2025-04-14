@@ -17,11 +17,13 @@ interface PrestationsProps extends PrestationTypes {
 export default function Prestations():ReactElement {
     const [prestations, setPrestations] = useState<object[]>([])
     const fetchPrestations:()=>Promise<void> = async ():Promise<void> => {
-        const res:AxiosResponse<PrestationsProps> = await axios.get('./articleData.json')
+        const res:AxiosResponse<PrestationsProps> = await axios.get('/projets/fusionaile/articleData.json')
         setPrestations(res.data.presta)
+        // console.log(res.data)
     }
     useEffect(():void => {
         fetchPrestations()
+        // console.log(prestations)
     },[])
 
     const titleElement:(classes:string)=>ReactElement = (classes:string):ReactElement=>{

@@ -6,6 +6,7 @@ import logoImg from "@/assets/Logo_Fusionailes.webp"
 import { House, CircleHelp, ShoppingBasket } from "lucide-react"
 
 export default function Navbar(): ReactElement {
+    const baseURL:string = "/projets/fusionaile"
     return (
         <>
 
@@ -15,11 +16,11 @@ export default function Navbar(): ReactElement {
                 <NavLink to="/" className="size-32 col-start-1 items-center absolute left-0 -top-4"><img src={logoImg} alt="logo"/></NavLink>
 
                 <div className="flex w-full h-full items-center gap-1 col-start-2 mx-auto justify-center">
-                    <NavBtn name="Accueil" route="/"/>
-                    <NavBtn name="Prestations" route="/presta"/>
+                    <NavBtn name="Accueil" route={`/`}/>
+                    <NavBtn name="Prestations" route={`/presta`}/>
                     {/*<NavBtn name="resa" route="/reserver"/>*/}
 
-                    <NavBtn name="A propos" route="/about"/>
+                    <NavBtn name="A propos" route={`/about`}/>
 
                 </div>
                 <Drawer styleBtn={'btn bg-primary hover:bg-primary-hover ml-auto col-start-3 text-white font-bold'}
